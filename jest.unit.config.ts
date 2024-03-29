@@ -1,5 +1,5 @@
 module.exports = {
-    testMatch: ["**/*.unit.test.ts"],
+    testMatch: ["**/*.u.test.ts"],
     clearMocks: true, coverageProvider: "v8",
     preset: 'ts-jest',
 };

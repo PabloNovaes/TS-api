@@ -31,3 +31,19 @@ docker-compose up -d
 ```bash
 npx prisma migrate dev --name init
 ```
+
+## Como testar
+
+A aplicação conta com testes unitarios e de integração, então possuem scripts diferentes para cada
+
+### Integração
+
+```bash
+npm run test:integration
+```
+
+### Unitários
+
+```bash
+npm run test:unit
+```

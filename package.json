@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx --watch --no-warnings ./src/infra/http/server.ts",
     "studio": "npx prisma studio --schema=./src/infra/prisma/schema.prisma",
-    "test": "jest",
+    "test:integration": "jest",
     "test:unit": "jest --config=jest.unit.config.ts",
     "clearDb": "tsx ./hash.ts"
   },

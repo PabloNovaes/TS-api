@@ -1,5 +1,5 @@
 import { User } from "@/interfaces/User";
-import { Bcrypt } from "@/utils/bcrypt";
+import { Bcrypt } from "../../utils/bcrypt";
 
 export class InMemoryUserRepository {
     private bcrypt = new Bcrypt()
