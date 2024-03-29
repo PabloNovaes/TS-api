@@ -8,6 +8,7 @@ Uma API simples com os metodos de um CRUD, porem utilizando tecnologias modernas
 
 - Node
 - Fastify
+- Postgres
 - Typescript
 - Jest e Supertest
 - Bcrypt
