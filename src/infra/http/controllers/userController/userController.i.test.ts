@@ -15,7 +15,7 @@ describe("Integration testing on user entity", () => {
 
     it("create new user", async () => {
         const response = await request(app.server)
-            .post("/user")
+            .post("/users/create")
             .send(userStructure)
 
         expect(response.status).toBe(201)
@@ -28,19 +28,19 @@ describe("Integration testing on user entity", () => {
     })
 
     it("get all users", async () => {
-        const response = await request(app.server).get("/find")
+        const response = await request(app.server).get("/users")
         expect(response.status).toBe(200)
     })
 
-    it("throw new exception if email already() in use", async () => {
-        await request(app.server).post("/user").send({
+    it("throw new exception if email already in use", async () => {
+        await request(app.server).post("/users/create").send({
             name: "jest user",
             email: "jest@gmail.com",
             password: "jest"
         })
 
         const testCreateUserRule = await request(app.server)
-            .post("/user")
+            .post("/users/create")
             .send({
                 name: "jest user",
                 email: "jest@gmail.com",
@@ -52,8 +52,8 @@ describe("Integration testing on user entity", () => {
     })
 
     it("delete user by id", async () => {
-        const resposne = await request(app.server).get("/find")
-        const { id }: User = resposne.body[0]
+        const response = await request(app.server).get("/users")
+        const { id }: User = response.body[0]
 
         expect(id)
 
@@ -61,7 +61,6 @@ describe("Integration testing on user entity", () => {
             .delete("/delete")
             .send({ id })
 
-        console.log(deleteUser.body);
         expect(deleteUser)
 
     })

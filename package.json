@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init-db": "docker-compose up -d && npx prisma migrate deploy --schema=./src/infra/prisma/schema.prisma && npx prisma migrate deploy --schema=./src/infra/prisma/schema.prisma",
     "dev": "tsx --watch --no-warnings ./src/infra/http/server.ts",
     "studio": "npx prisma studio --schema=./src/infra/prisma/schema.prisma",
     "test:integration": "jest",

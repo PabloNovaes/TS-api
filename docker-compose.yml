@@ -1,9 +1,26 @@
-version: "3.8"
+# Windows #
+
+# services:
+#   postgres:
+#     container_name: ts_api_container
+#     image: postgres:15
+#     ports:
+#       - "5432:5432"
+#     environment:
+#       POSTGRES_USER: root
+#       POSTGRES_PASSWORD: docker
+#       POSTGRES_DB: ts-api
+#       PGDATA: /data/postgres
+#     volumes:
+#       - ./data/pg:/data/postgres
+
+# Macos #
 
 services:
   postgres:
-    container_name: ts-api
-    image: postgres:latest
+    container_name: ts_api_container
+    image: postgres:15
+    platform: linux/amd64 # Força o uso da arquitetura x86
     ports:
       - "5432:5432"
     environment:

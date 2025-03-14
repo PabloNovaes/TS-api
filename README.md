@@ -13,24 +13,24 @@ Uma API simples com os metodos de um CRUD, porem utilizando tecnologias modernas
 - Jest e Supertest
 - Bcrypt
 
-## Como usar
+## Testando o projeto
 
-### instale as dependencias
+### nstale as dependencias
 
 ```bash
 npm install
 ```
 
-### Suba um banco com Docker
+### Rode o script abaixo para inicializar o container docker e o prisma client, além de subir a estrutura do schema.prisma para o banco
 
 ```bash
-docker-compose up -d
+npm run init-db
 ```
 
-### inicialize o prisma
+### Inicialize o servidor
 
 ```bash
-npx prisma migrate dev --name init
+npm run dev
 ```
 
 ## Como testar
