@@ -15,7 +15,7 @@ Uma API simples com os metodos de um CRUD, porem utilizando tecnologias modernas
 
 ## Testando o projeto
 
-### nstale as dependencias
+### Instale as dependencias
 
 ```bash
 npm install
